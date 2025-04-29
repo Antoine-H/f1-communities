@@ -31,7 +31,7 @@ class NF1(object):
 
         return (np.mean(f1_list), np.std(f1_list),
                 np.max(f1_list), np.min(f1_list),
-                scipy.stats.mode(f1_list)[0][0])
+                scipy.stats.mode(f1_list)[0])
 
     def get_partition_stats(self):
         return (float(len(self.matched_gt))/float(self.gt_count),  # coverage
